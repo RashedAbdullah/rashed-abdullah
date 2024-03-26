@@ -1,8 +1,8 @@
-import { Roboto } from "next/font/google";
+import { Roboto_Condensed } from "next/font/google";
 import "@/css/css.css";
 
-const roboto = Roboto({
-  weight: ["100", "300"],
+const roboto = Roboto_Condensed({
+  weight: ["100", "200", "300", "400", "500", "600"],
   subsets: ["latin"],
 });
 
