@@ -1,3 +1,4 @@
+import ScrollAnimation from "@/components/scroll-animation";
 import { blogs } from "@/data/blogs";
 import Image from "next/image";
 import React from "react";
@@ -24,6 +25,7 @@ const Blog = ({ params: { blog } }) => {
           </div>
         </div>
       </div>
+      <ScrollAnimation />
     </div>
   );
 };
