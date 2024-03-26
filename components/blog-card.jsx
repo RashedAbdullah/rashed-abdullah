@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BlogCard = ({ blog }) => {
-
   return (
     <div className="bg-white shadow relative lg:mt-0 mt-5">
       <div className="overflow-hidden">
@@ -36,11 +35,15 @@ const BlogCard = ({ blog }) => {
           </ul>
 
           <h2 className="text-lg">{blog.title}</h2>
-          <p className="font-[200] text-sm">{blog.content[0]} ...</p>
+          <p className="font-[200] text-sm">
+            {blog.content[0].slice(0, 240)} ...
+          </p>
           <div>
-            <button className="bg-colors-quinary text-white px-5 py-2 mb-5 hover:bg-blue-800 transition">
-              Read more
-            </button>
+            <Link href={`/blogs/${blog.id}`}>
+              <button className="bg-colors-quinary text-white px-5 py-2 mb-5 hover:bg-blue-800 transition">
+                Read more
+              </button>
+            </Link>
           </div>
         </div>
       </div>
