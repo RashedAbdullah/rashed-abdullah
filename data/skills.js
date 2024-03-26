@@ -4,7 +4,7 @@ import { IoSettingsSharp } from "react-icons/io5";
 export const skills = [
   {
     type: "Professional",
-    icon: <BiSolidUser color="white" />,
+    icon: <IoSettingsSharp color="white" />,
     skills: [
       {
         name: "JavaScript",
@@ -26,7 +26,7 @@ export const skills = [
   },
   {
     type: "Personal",
-    icon: <IoSettingsSharp color="white" />,
+    icon: <BiSolidUser color="white" />,
     skills: [
       {
         name: "Communication",
