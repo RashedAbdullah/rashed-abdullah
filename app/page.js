@@ -7,6 +7,7 @@ import GoToTop from "@/components/go-to-top";
 import MenuBar from "@/components/menu-bar";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
+import { AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 
 export default function Home() {
@@ -23,13 +24,6 @@ export default function Home() {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <main>
       <MenuBar
@@ -43,7 +37,9 @@ export default function Home() {
           scrollToSection,
         }}
       />
-      <GoToTop onScrollTop={scrollToTop} />
+      <AnimatePresence mode="wait">
+        <GoToTop />
+      </AnimatePresence>
       <div className="flex flex-col items-center justify-center" ref={aboutRef}>
         <div className="lg:w-[60vw] text-xs lg:text-sm m-5 flex flex-col gap-10">
           <div>
