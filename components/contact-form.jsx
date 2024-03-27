@@ -34,7 +34,7 @@ const ContactForm = () => {
           rows={3}
           cols={20}
           type="text"
-          placeholder="Subject"
+          placeholder="Message"
           className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2"
         />
       </div>
