@@ -2,6 +2,6 @@ export const projectsCategory = [
   "All",
   "Educational",
   "E-commerce",
-  "Arabic",
-  "Bangla",
+  "Portfolio",
+  "Blogs",
 ];

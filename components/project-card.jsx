@@ -44,8 +44,15 @@ const ProjectCard = ({ project }) => {
             </a>
           </div>
         </div>
-        <div>
+        <div className="flex justify-between items-center">
           <h2 className="font-[400]">{project.title}</h2>
+          <div className="flex gap-2">
+            {project.tools.map((tool) => (
+              <p key={tool} className="  text-[15px] font-[100]">
+                {tool}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="font-[200]">{project.desc}</div>
       </div>
