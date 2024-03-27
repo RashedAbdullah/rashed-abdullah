@@ -1,1 +1,8 @@
-export const menuList = ["About", "Skills", "Projects", "Blogs", "Contact"];
+export const menuList = [
+  "Home",
+  "About",
+  "Skills",
+  "Projects",
+  "Blogs",
+  "Contact",
+];
