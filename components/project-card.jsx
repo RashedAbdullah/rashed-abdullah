@@ -12,8 +12,7 @@ const ProjectCard = ({ project }) => {
       transition={{ duration: 0.5 }}
       className="bg-white shadow gap-2 lg:mb-0 mb-4 overflow-hidden"
     >
-      <Link href="" className="">
-        {" "}
+      <a target="_blank" href={project.live} className="">
         <Image
           src={`/${project.img}`}
           alt=""
@@ -21,7 +20,7 @@ const ProjectCard = ({ project }) => {
           width={1000}
           className="object-cover hover:scale-105 transition duration-300"
         />
-      </Link>
+      </a>
       <div className="mt-2 p-3 flex flex-col gap-2">
         <div className="flex justify-between items-center">
           <p className="bg-colors-primary text-[15px] p-1 font-[100]">
