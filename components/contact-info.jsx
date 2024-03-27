@@ -1,9 +1,14 @@
 import { aboutMe } from "@/data/about-me";
-import React from "react";
+import { motion } from "framer-motion";
 
 const ContactInfo = () => {
   return (
-    <div className="bg-white shadow p-5">
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow p-5"
+    >
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
@@ -54,7 +59,7 @@ const ContactInfo = () => {
           <p className="">{aboutMe.email}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

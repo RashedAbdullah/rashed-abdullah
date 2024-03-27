@@ -1,11 +1,11 @@
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { menuList } from "@/data/menu-list";
-import { useState, useRef } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const MenuBar = ({
   refs: {
-    homeRef,
     aboutRef,
     skillsRef,
     projectsRef,
@@ -16,7 +16,6 @@ const MenuBar = ({
 }) => {
   const [isHide, setIsHide] = useState(false);
 
-  // Function to toggle menu
   const toggleMenu = () => {
     setIsHide(!isHide);
   };
@@ -28,12 +27,13 @@ const MenuBar = ({
       } `}
     >
       <div className=" text-xl ">
-        <button
+        <motion.button
+          whileHover={{ scale: 1.2 }}
           onClick={toggleMenu}
           className="bg-colors-quinary h-8 w-8 mt-1 flex justify-center items-center mr-2 text-white text-sm rounded-full hover:bg-white hover:text-colors-quinary transition duration-300"
         >
           {!isHide ? <FiMenu /> : <IoClose />}
-        </button>
+        </motion.button>
       </div>
       <div>
         <ul className="bg-colors-quinary text-white h-screen">
@@ -41,7 +41,6 @@ const MenuBar = ({
             <li key={menu}>
               <button
                 onClick={() => {
-                  // Scroll to the corresponding section based on the menu item clicked
                   switch (menu) {
                     case "Home":
                       window.scrollTo({

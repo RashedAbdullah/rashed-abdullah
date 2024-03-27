@@ -2,10 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { TbLiveView } from "react-icons/tb";
 import { DiGithubBadge } from "react-icons/di";
+import { motion } from "framer-motion";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white shadow gap-2 lg:mb-0 mb-4 overflow-hidden">
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow gap-2 lg:mb-0 mb-4 overflow-hidden"
+    >
       <Link href="" className="">
         {" "}
         <Image
@@ -43,7 +49,7 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className="font-[200]">{project.desc}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const BlogCard = ({ blog }) => {
   return (
-    <div className="bg-white shadow relative lg:mt-0 mt-5">
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow relative lg:mt-0 mt-5"
+    >
       <div className="overflow-hidden">
         <Link href={`/blogs/${blog.id}`} className="">
           <Image
@@ -47,7 +53,7 @@ const BlogCard = ({ blog }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

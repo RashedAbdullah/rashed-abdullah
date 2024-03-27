@@ -1,8 +1,13 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   return (
-    <form className="bg-white shadow p-5 mt-4 lg:mt-0">
+    <motion.form
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow p-5 mt-4 lg:mt-0"
+    >
       <div>
         <input
           type="text"
@@ -38,7 +43,7 @@ const ContactForm = () => {
           Send Message
         </button>
       </div>
-    </form>
+    </motion.form>
   );
 };
 

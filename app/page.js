@@ -7,11 +7,10 @@ import GoToTop from "@/components/go-to-top";
 import MenuBar from "@/components/menu-bar";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useState } from "react";
 
 export default function Home() {
-  // Refs for each section to scroll to
   const [homeRef, setHomRef] = useState("");
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -19,7 +18,6 @@ export default function Home() {
   const blogsRef = useRef(null);
   const contactRef = useRef(null);
 
-  // Function to scroll to a specific section
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -42,12 +40,21 @@ export default function Home() {
       </AnimatePresence>
       <div className="flex flex-col items-center justify-center" ref={aboutRef}>
         <div className="lg:w-[60vw] text-xs lg:text-sm m-5 flex flex-col gap-10">
-          <div>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <About />
-          </div>
-          <div ref={skillsRef}>
+          </motion.div>
+          <motion.div
+            ref={skillsRef}
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <Skills />
-          </div>
+          </motion.div>
           <div ref={projectsRef}>
             <Projects />
           </div>
