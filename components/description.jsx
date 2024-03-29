@@ -2,7 +2,7 @@
 import { aboutMe } from "@/data/about-me";
 import React from "react";
 
-const Description = () => {
+const Description = ({ contactRef }) => {
   return (
     <div className="col-span-7 py-6 lg:py-0 text-colors-tertiary flex flex-col gap-2">
       <p>{aboutMe.desc1}</p>
@@ -11,7 +11,12 @@ const Description = () => {
         <button className="bg-colors-quinary text-white py-2 px-5 hover:bg-blue-800 transition">
           Download CV
         </button>
-        <button className="bg-colors-primary text-colors-quaternar py-2 px-5 hover:text-black transition">
+        <button
+          onClick={() =>
+            contactRef.current.scrollIntoView({ behavior: "smooth" })
+          }
+          className="bg-colors-primary text-colors-quaternar py-2 px-5 hover:text-black transition"
+        >
           Contact Me
         </button>
       </div>

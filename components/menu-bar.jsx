@@ -20,6 +20,34 @@ const MenuBar = ({
     setIsHide(!isHide);
   };
 
+  const handleMenu = (menu) => {
+    switch (menu) {
+      case "Home":
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        break;
+      case "About":
+        scrollToSection(aboutRef);
+        break;
+      case "Skills":
+        scrollToSection(skillsRef);
+        break;
+      case "Projects":
+        scrollToSection(projectsRef);
+        break;
+      case "Blogs":
+        scrollToSection(blogsRef);
+        break;
+      case "Contact":
+        scrollToSection(contactRef);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <div
       className={`fixed z-50 right-0 top-0 flex transition duration-500 ${
@@ -40,33 +68,7 @@ const MenuBar = ({
           {menuList.map((menu) => (
             <li key={menu}>
               <button
-                onClick={() => {
-                  switch (menu) {
-                    case "Home":
-                      window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                      });
-                      break;
-                    case "About":
-                      scrollToSection(aboutRef);
-                      break;
-                    case "Skills":
-                      scrollToSection(skillsRef);
-                      break;
-                    case "Projects":
-                      scrollToSection(projectsRef);
-                      break;
-                    case "Blogs":
-                      scrollToSection(blogsRef);
-                      break;
-                    case "Contact":
-                      scrollToSection(contactRef);
-                      break;
-                    default:
-                      break;
-                  }
-                }}
+                onClick={() => handleMenu(menu)}
                 className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
               >
                 {menu}

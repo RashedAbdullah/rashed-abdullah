@@ -8,7 +8,6 @@ const Blogs = () => {
     <div>
       <Title>Blogs</Title>
       <div className="lg:grid grid-cols-2 gap-5">
-        {/* Blog start */}
         {blogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}

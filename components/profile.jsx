@@ -1,14 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import SocilaLinks from "./socialLinks";
+import SocilaLinks from "./social-links";
 import Link from "next/link";
+import { aboutMe } from "@/data/about-me";
 
 const Profile = () => {
   return (
     <div className="">
       <Link href="/">
         <Image
-          src={"/profile.jpg"}
+          src={aboutMe.profile}
           height={150}
           width={150}
           alt="Profile"
@@ -17,10 +18,10 @@ const Profile = () => {
       </Link>
       <div className="flex flex-col items-center gap-2 lg:pt-20 pt-12">
         <h2 className="lg:text-4xl text-2xl text-colors-quaternary font-thin">
-          Rashed Abdullah
+          {aboutMe.name}
         </h2>
         <h3 className="text-black font-[300] text-[18px]">
-          Front-end Developer
+          {aboutMe.profession}
         </h3>
         <SocilaLinks />
       </div>

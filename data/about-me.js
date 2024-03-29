@@ -1,5 +1,7 @@
 export const aboutMe = {
   name: "Abdul Ahad Rashed",
+  profession: "Front-end Developer",
+  profile: "/profile.jpg",
   age: "24",
   citizenship: "Bangladesh",
   address: "Feni, Bangladesh",

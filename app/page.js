@@ -45,7 +45,7 @@ export default function Home() {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <About />
+            <About contactRef={contactRef} />
           </motion.div>
           <motion.div
             ref={skillsRef}
