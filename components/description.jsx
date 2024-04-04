@@ -8,9 +8,14 @@ const Description = ({ contactRef }) => {
       <p>{aboutMe.desc1}</p>
       <p className="mt-2">{aboutMe.desc2}</p>
       <div className="flex gap-3 flex-col lg:flex-row">
-        <button className="bg-colors-quinary text-white py-2 px-5 hover:bg-blue-800 transition">
+        <a
+          href="../resume/RashedResume.pdf"
+          download="RashedResume.pdf"
+          className="bg-colors-quinary text-white py-2 px-5 hover:bg-blue-800 transition"
+        >
           Download CV
-        </button>
+        </a>
+
         <button
           onClick={() =>
             contactRef.current.scrollIntoView({ behavior: "smooth" })
