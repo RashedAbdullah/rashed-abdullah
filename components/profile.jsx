@@ -3,7 +3,7 @@ import React from "react";
 import SocilaLinks from "./social-links";
 import Link from "next/link";
 import { aboutMe } from "@/data/about-me";
-import profileImage from "@/public/profile.jpg"
+import profileImage from "@/public/profile.jpg";
 
 const Profile = () => {
   return (
