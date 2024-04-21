@@ -3,16 +3,19 @@ import React from "react";
 import SocilaLinks from "./social-links";
 import Link from "next/link";
 import { aboutMe } from "@/data/about-me";
+import profileImage from "@/public/profile.jpg"
 
 const Profile = () => {
   return (
     <div className="">
       <Link href="/">
         <Image
-          src={aboutMe.profile}
+          // priority={true}
+          placeholder="blur"
+          src={profileImage}
           height={150}
           width={150}
-          alt="Profile"
+          alt="Profile image"
           className="rounded-full absolute left-[50%] translate-x-[-50%] translate-y-[-50%]  lg:h-32 lg:w-32 h-20 w-20  shadow-lg"
         />
       </Link>
