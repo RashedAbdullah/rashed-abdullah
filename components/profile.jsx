@@ -10,7 +10,6 @@ const Profile = () => {
     <div className="">
       <Link href="/">
         <Image
-          // priority={true}
           placeholder="blur"
           src={profileImage}
           height={150}
