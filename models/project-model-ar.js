@@ -1,11 +1,11 @@
 import mongoose, { Schema } from "mongoose";
 
-const blogSchema = new Schema({
+const projectSchema = new Schema({
   title: {
     required: true,
     type: String,
   },
-  content: {
+  desc: {
     required: true,
     type: String,
   },
@@ -13,7 +13,7 @@ const blogSchema = new Schema({
     required: true,
     type: String,
   },
-  tags: {
+  tools: {
     required: true,
     type: Array,
   },
@@ -21,19 +21,15 @@ const blogSchema = new Schema({
     required: true,
     type: String,
   },
-  date: {
+  code: {
     required: true,
     type: String,
   },
-  month: {
-    required: true,
-    type: String,
-  },
-  year: {
+  live: {
     required: true,
     type: String,
   },
 });
 
-export const blogModel =
-  mongoose.models.products ?? mongoose.model("blogs", blogSchema);
+export const projectModel_ar =
+  mongoose.models.projects_ar ?? mongoose.model("projects_ar", projectSchema);

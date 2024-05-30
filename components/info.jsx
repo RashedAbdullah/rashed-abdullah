@@ -1,57 +1,58 @@
-import { aboutMe } from "@/data/about-me";
+import { useLanguage } from "@/contexts/language-provider";
 import React from "react";
 
 const Info = () => {
+  const langs = useLanguage();
   return (
     <div className="col-span-5">
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Age:
+            {langs.agename} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.age}</p>
+          <p className="">{langs.age}</p>
         </div>
       </div>
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Citizenship:
+            {langs.citizenshipname} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.citizenship}</p>
+          <p className="">{langs.citizenship}</p>
         </div>
       </div>
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Address:
+            {langs.addressname} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.address}</p>
-        </div>
-      </div>{" "}
-      <div className="grid grid-cols-12 border-b border-dashed py-2">
-        <div className="lg:col-span-3 col-span-4">
-          <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Phone:
-          </span>
-        </div>
-        <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.phone}</p>
+          <p className="">{langs.address}</p>
         </div>
       </div>
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            E-mail:
+            {langs.phonename} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.email}</p>
+          <p className="">{langs.phone}</p>
+        </div>
+      </div>
+      <div className="grid grid-cols-12 border-b border-dashed py-2">
+        <div className="lg:col-span-3 col-span-4">
+          <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
+            {langs.emailname} :
+          </span>
+        </div>
+        <div className="lg:col-span-9 col-span-7">
+          <p className="">{langs.email}</p>
         </div>
       </div>
     </div>

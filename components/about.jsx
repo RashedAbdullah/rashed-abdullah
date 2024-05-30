@@ -3,11 +3,14 @@ import React from "react";
 import Info from "./info";
 import Description from "./description";
 
-const About = ({contactRef}) => {
+const About = ({ contactRef, lang }) => {
   return (
-    <div className=" bg-white p-5 lg:grid grid-cols-12 rounded-sm shadow gap-10 items-center">
+    <div
+      dir={lang === "ar" && "rtl"}
+      className=" bg-white p-5 lg:grid grid-cols-12 rounded-sm shadow gap-10 items-center"
+    >
       <Info />
-      <Description contactRef={contactRef}/>
+      <Description contactRef={contactRef} />
     </div>
   );
 };

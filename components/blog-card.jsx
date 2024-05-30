@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/language-provider";
 
 const BlogCard = ({ blog }) => {
+  const langs = useLanguage()
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
@@ -47,7 +49,7 @@ const BlogCard = ({ blog }) => {
           <div>
             <Link href={`/blogs/${blog.id}`}>
               <button className="bg-colors-quinary text-white px-5 py-2 mb-5 hover:bg-blue-800 transition">
-                Read more
+                {langs.readmore}
               </button>
             </Link>
           </div>

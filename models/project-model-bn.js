@@ -31,5 +31,5 @@ const projectSchema = new Schema({
   },
 });
 
-export const projectModel =
-  mongoose.models.products ?? mongoose.model("projects", projectSchema);
+export const projectModel_bn =
+  mongoose.models.projects_bn ?? mongoose.model("projects_bn", projectSchema);

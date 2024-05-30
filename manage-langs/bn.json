@@ -3,7 +3,7 @@
   "profession": "ফ্রন্ট-এন্ড ডেভেলপার",
   "age": "২৪",
   "citizenship": "বাংলাদেশ",
-  "Address": "ফেনী, বাংলাদেশ",
+  "address": "ফেনী, বাংলাদেশ",
   "phone": "+৮৮০১৬০৩৪৪৩২১৪",
   "email": "abdulahad4rashed@gamil.com",
   "desc": "Passionate front-end developer proficient in JavaScript, React.js, and Next.js, adept at crafting captivating digital experiences. With a keen eye for design and meticulous coding, I create dynamic and responsive web applications that exceed expectations. Let's collaborate to bring your digital vision to life. Skilled in JavaScript, React.js, and Next.js, I specialize in seamless user experiences from conception to deployment. Dedicated and experienced, I ensure each project receives the attention it deserves. Let's build impactful digital solutions together.",
@@ -28,11 +28,19 @@
   "yourname": "আপনার নাম",
   "youremail": "আপনার ইমেইল",
   "subject": "বিষয়",
-  "Message": "মেসেজ",
+  "message": "মেসেজ",
   "sendMessage": "মেসেজ পাঠান",
   "allright": "সত্ব সংরক্ষিত",
 
   "home": "হোম",
   "about": "সম্পর্কে",
-  "contact": "যোগাযোগ"
+  "contact": "যোগাযোগ",
+
+  "noProject": "কোন প্রজেকট খুঁজে পাওয়া যায় নি।",
+
+  "agename": "বয়স",
+  "citizenshipname": "নাগরিকত্ব",
+  "addressname": "ঠিকানা",
+  "phonename": "ফোন",
+  "emailname": "ইমেইল"
 }

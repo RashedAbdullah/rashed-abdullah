@@ -2,6 +2,8 @@ import { Roboto_Condensed, Aref_Ruqaa, Hind_Siliguri } from "next/font/google";
 import "@/css/css.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { LanguageProvider } from "@/contexts/language-provider";
+import { getManageLangs } from "@/manage-langs/manage-langs";
 
 const roboto = Roboto_Condensed({
   weight: ["100", "200", "300", "400", "500", "600"],
@@ -23,9 +25,10 @@ export const metadata = {
   description: "Rashed Abdullah's Portfolio website",
 };
 
-export default function RootLayout({ children, params: { lang } }) {
+export default async function RootLayout({ children, params: { lang } }) {
+  const langs = await getManageLangs(lang);
   return (
-    <html lang={`${lang === "en" ? "en" : lang === "ar" ? "ar" : "bn"}`}>
+    <html lang={lang}>
       <body
         className={`${
           lang === "en"
@@ -35,9 +38,11 @@ export default function RootLayout({ children, params: { lang } }) {
             : siliguri.className
         } bg-colors-primary selection:text-colors-quinary`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <LanguageProvider language={langs}>
+          <Header lang={lang} />
+          {children}
+          <Footer lang={lang} />
+        </LanguageProvider>
       </body>
     </html>
   );

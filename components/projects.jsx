@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Title from "./title";
-import { projectsCategory } from "@/data/projects-category";
-
 import { projects } from "@/data/projects";
 import ProjectCard from "./project-card";
 import ProjectCategory from "./projects-category";
+import { useLanguage } from "@/contexts/language-provider";
 
-const Projects = () => {
+const Projects = ({ lang }) => {
+  const langs = useLanguage();
   const [allprojects, setallProjects] = useState(projects);
   const handlePorejctCategory = (category) => {
     switch (category) {
@@ -18,9 +18,10 @@ const Projects = () => {
         );
     }
   };
+
   return (
     <div>
-      <Title>Projects</Title>
+      <Title>{langs.projects}</Title>
       <ProjectCategory onSwitchCategory={handlePorejctCategory} />
       <div className="lg:grid grid-cols-3 mt-10 gap-5">
         {allprojects.length ? (
@@ -29,7 +30,7 @@ const Projects = () => {
           ))
         ) : (
           <div className="col-span-3 text-center font-[100] text-2xl my-20 text-gray-400">
-            <h3>No Projects Found</h3>
+            <h3>{langs.noProject}</h3>
           </div>
         )}
       </div>

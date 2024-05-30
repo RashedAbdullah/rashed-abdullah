@@ -1,0 +1,44 @@
+[
+  {
+    "skill_type": "Professional",
+    "allSkills": [
+      {
+        "tool": "JavaScript",
+        "capacity": "64%"
+      },
+      {
+        "tool": "React.js",
+        "capacity": "64%"
+      },
+      {
+        "tool": "Next.js",
+        "capacity": "64%"
+      },
+      {
+        "tool": "Node.js",
+        "capacity": "64%"
+      }
+    ]
+  },
+  {
+    "skill_type": "Personal",
+    "allSkills": [
+      {
+        "tool": "Communication",
+        "capacity": "64%"
+      },
+      {
+        "tool": "Team Work",
+        "capacity": "64%"
+      },
+      {
+        "tool": "Language",
+        "capacity": "64%"
+      },
+      {
+        "tool": "Creativity",
+        "capacity": "64%"
+      }
+    ]
+  }
+]

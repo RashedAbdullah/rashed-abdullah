@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Quran Bangla Translation",
+    "desc": "I've built a React.js app featuring the Quran's Bangla translation for easy access to its teachings. Users can navigate smoothly through translated texts, fostering deeper understanding and connection with the sacred content. The project promotes accessibility and inclusivity, offering the Quran in a widely spoken language.",
+    "category": "Educational",
+    "tools": ["React.js"],
+    "thumbnail": "https://i.ibb.co/MhNpD1D/quran-bangla.png",
+    "code": "https://github.com/RashedAbdullah/quran-bangla",
+    "live": "https://quran-bangla-iota.vercel.app"
+  },
+  {
+    "title": "Rashed's Portfolio",
+    "desc": "I've developed my portfolio website using Next.js, showcasing my skills, projects, and experiences. The website offers a sleek and responsive design, allowing visitors to explore my work and achievements efficiently. With Next.js's performance and flexibility, my portfolio stands out as a professional and dynamic representation of my capabilities.",
+    "category": "Portfolio",
+    "tools": ["Nextjs"],
+    "thumbnail": "https://i.ibb.co/TTsqzMV/Rashed-portfolio.png",
+    "code": "https://github.com/RashedAbdullah/rashed-abdullah",
+    "live": "https://rashed-abdullah.vercel.app"
+  },
+  {
+    "title": "Book finder",
+    "desc": "I've crafted a Book Finder website using React.js, enabling users to search and sort books by category and alphabetically. The website offers a seamless experience, providing efficient navigation and organization of book collections. With intuitive features, users can easily discover and explore their desired reads.",
+    "category": "Educational",
+    "tools": ["React.js"],
+    "thumbnail": "https://i.ibb.co/D9kxbyG/book-finder.png",
+    "code": "https://github.com/RashedAbdullah/assignment-02",
+    "live": "https://assignment-02-coral.vercel.app"
+  }
+]

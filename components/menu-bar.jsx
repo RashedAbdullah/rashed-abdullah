@@ -1,8 +1,9 @@
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
-import { menuList } from "@/data/menu-list";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/language-provider";
 
 const MenuBar = ({
   refs: {
@@ -13,6 +14,7 @@ const MenuBar = ({
     contactRef,
     scrollToSection,
   },
+ 
 }) => {
   const [isHide, setIsHide] = useState(false);
 
@@ -20,27 +22,30 @@ const MenuBar = ({
     setIsHide(!isHide);
   };
 
-  const handleMenu = (menu) => {
-    switch (menu) {
-      case "Home":
+  const langs = useLanguage();
+
+
+  const handleMenu = (e) => {
+    switch (e.target.innerText) {
+      case langs.home:
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
         break;
-      case "About":
+      case langs.about:
         scrollToSection(aboutRef);
         break;
-      case "Skills":
+      case langs.skills:
         scrollToSection(skillsRef);
         break;
-      case "Projects":
+      case langs.projects:
         scrollToSection(projectsRef);
         break;
-      case "Blogs":
+      case langs.blogs:
         scrollToSection(blogsRef);
         break;
-      case "Contact":
+      case langs.contact:
         scrollToSection(contactRef);
         break;
       default:
@@ -65,16 +70,54 @@ const MenuBar = ({
       </div>
       <div>
         <ul className="bg-colors-quinary text-white h-screen">
-          {menuList.map((menu) => (
-            <li key={menu}>
-              <button
-                onClick={() => handleMenu(menu)}
-                className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
-              >
-                {menu}
-              </button>
-            </li>
-          ))}
+          <li>
+            <button
+              onClick={handleMenu}
+              className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
+            >
+              {langs.home}
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={handleMenu}
+              className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
+            >
+              {langs.about}
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={handleMenu}
+              className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
+            >
+              {langs.skills}
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={handleMenu}
+              className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
+            >
+              {langs.projects}
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={handleMenu}
+              className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
+            >
+              {langs.blogs}
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={handleMenu}
+              className="py-3 w-56 pl-10 hover:bg-blue-800 transition duration-300 text-start"
+            >
+              {langs.contact}
+            </button>
+          </li>
         </ul>
       </div>
     </div>

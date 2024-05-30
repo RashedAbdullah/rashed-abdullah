@@ -2,10 +2,12 @@ import Image from "next/image";
 import React from "react";
 import SocilaLinks from "./social-links";
 import Link from "next/link";
-import { aboutMe } from "@/data/about-me";
 import profileImage from "@/public/profile.jpg";
+import { getManageLangs } from "@/manage-langs/manage-langs";
 
-const Profile = () => {
+const Profile = async ({ lang }) => {
+  const langs = await getManageLangs(lang);
+
   return (
     <div className="">
       <Link href="/">
@@ -20,10 +22,10 @@ const Profile = () => {
       </Link>
       <div className="flex flex-col items-center gap-2 lg:pt-20 pt-12">
         <h2 className="lg:text-4xl text-2xl text-colors-quaternary font-thin">
-          {aboutMe.name}
+          {langs.name}
         </h2>
-        <h3 className="text-black font-[300] text-[18px]">
-          {aboutMe.profession}
+        <h3 className="text-gray-600 font-[300] text-[18px]">
+          {langs.profession}
         </h3>
         <SocilaLinks />
       </div>

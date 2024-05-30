@@ -1,9 +1,12 @@
+import { useLanguage } from "@/contexts/language-provider";
 import { aboutMe } from "@/data/about-me";
 import { motion } from "framer-motion";
 
-const ContactInfo = () => {
+const ContactInfo = ({ lang }) => {
+  const langs = useLanguage();
   return (
     <motion.div
+      dir={lang === "ar" && "rtl"}
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -12,51 +15,51 @@ const ContactInfo = () => {
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Age:
+            {langs.agename} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.age}</p>
+          <p>{langs.age}</p>
         </div>
       </div>
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Citizenship:
+            {langs.citizenshipname} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.citizenship}</p>
+          <p>{langs.citizenship}</p>
         </div>
       </div>
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Address:
+            {langs.addressname} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.address}</p>
+          <p>{langs.address}</p>
         </div>
       </div>{" "}
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            Phone:
+            {langs.phonename} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.phone}</p>
+          <p>{langs.phone}</p>
         </div>
       </div>
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">
-            E-mail:
+            {langs.emailname} :
           </span>
         </div>
         <div className="lg:col-span-9 col-span-7">
-          <p className="">{aboutMe.email}</p>
+          <p>{langs.email}</p>
         </div>
       </div>
     </motion.div>

@@ -3,14 +3,13 @@
 import About from "@/components/about";
 import Blogs from "@/components/blogs";
 import ContacetMe from "@/components/contact";
-import GoToTop from "@/components/go-to-top";
 import MenuBar from "@/components/menu-bar";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
-export default function Home() {
+export default function Home({ params: { lang } }) {
   const [homeRef, setHomRef] = useState("");
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -35,9 +34,7 @@ export default function Home() {
           scrollToSection,
         }}
       />
-      <AnimatePresence mode="wait">
-        <GoToTop />
-      </AnimatePresence>
+
       <div className="flex flex-col items-center justify-center" ref={aboutRef}>
         <div className="lg:w-[60vw] text-xs lg:text-sm m-5 flex flex-col gap-10">
           <motion.div
@@ -45,7 +42,7 @@ export default function Home() {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <About contactRef={contactRef} />
+            <About contactRef={contactRef} lang={lang} />
           </motion.div>
           <motion.div
             ref={skillsRef}
@@ -53,17 +50,16 @@ export default function Home() {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Skills />
+            <Skills lang={lang} />
           </motion.div>
           <div ref={projectsRef}>
-            <Projects />
+            <Projects lang={lang} />
           </div>
           <div ref={blogsRef}>
-            {" "}
-            <Blogs />
+            <Blogs lang={lang} />
           </div>
           <div ref={contactRef}>
-            <ContacetMe />
+            <ContacetMe lang={lang} />
           </div>
         </div>
       </div>
