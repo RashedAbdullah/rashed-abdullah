@@ -1,0 +1,38 @@
+{
+  "name": "Abdul Ahad Rashed",
+  "profession": "Front-end Developer",
+  "age": "24",
+  "citizenship": "Bangladesh",
+  "Address": "Feni, Bangladesh",
+  "phone": "+8801603443214",
+  "email": "abdulahad4rashed@gamil.com",
+  "desc": "Passionate front-end developer proficient in JavaScript, React.js, and Next.js, adept at crafting captivating digital experiences. With a keen eye for design and meticulous coding, I create dynamic and responsive web applications that exceed expectations. Let's collaborate to bring your digital vision to life. Skilled in JavaScript, React.js, and Next.js, I specialize in seamless user experiences from conception to deployment. Dedicated and experienced, I ensure each project receives the attention it deserves. Let's build impactful digital solutions together.",
+
+  "donwloadcv": "Download CV",
+  "contactme": "Contact Me",
+
+  "skills": "Skills",
+  "professional": "Professional",
+  "personal": "Personal",
+  "communication": "Communication",
+  "teamwork": "Team Work",
+  "language": "Language",
+  "creativity": "Creativity",
+
+  "projects": "Projects",
+  "all": "All",
+
+  "blogs": "Blogs",
+  "readmore": "Read More",
+
+  "yourname": "Your Name",
+  "youremail": "Your Email",
+  "subject": "Subject",
+  "Message": "Message",
+  "sendMessage": "Send Message",
+  "allright": "All Right Reserved",
+
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact"
+}
