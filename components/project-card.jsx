@@ -1,21 +1,20 @@
 import Image from "next/image";
-import Link from "next/link";
 import { TbLiveView } from "react-icons/tb";
 import { DiGithubBadge } from "react-icons/di";
 import { motion } from "framer-motion";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, lang }) => {
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow gap-2 lg:mb-0 mb-4 overflow-hidden"
+      className="bg-white shadow gap-2 lg:mb-0 mb-4 overflow-hidden p-1"
     >
       <a target="_blank" href={project.live} className="">
         <Image
-          src={`/${project.img}`}
-          alt=""
+          src={project.thumbnail}
+          alt={project.title}
           height={800}
           width={1000}
           className="object-cover hover:scale-105 transition duration-300"
@@ -36,7 +35,7 @@ const ProjectCard = ({ project }) => {
             </a>
             <a
               target="_blank"
-              href={project.github}
+              href={project.code}
               className="h-25 w-25 text-white bg-colors-quinary rounded-full p-1 shadow-lg hover:bg-blue-800 transition duration-300"
             >
               <DiGithubBadge />

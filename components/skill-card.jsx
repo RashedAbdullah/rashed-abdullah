@@ -1,22 +1,32 @@
 import { IoIosCheckmark } from "react-icons/io";
+import { BiSolidUser } from "react-icons/bi";
+import { IoSettingsSharp } from "react-icons/io5";
 
-const SkillCard = ({ skill }) => {
+const SkillCard = ({ skill, lang }) => {
   return (
     <div className="lg:w-[50%] bg-white p-5 shadow relative mt-10 lg:mt-0">
       <div className="h-10 w-10 bg-colors-quinary rounded-full absolute left-[50%] translate-x-[-50%] -top-5 shadow-2xl shadow-colors-quaternary flex justify-center items-center text-lg">
-        {skill.icon}
+        {skill.skill_type === "Professional" ? (
+          <IoSettingsSharp color="white" />
+        ) : (
+          <BiSolidUser color="white" />
+        )}
       </div>
-      <div className="text-center mt-5">{skill.type}</div>
+      <div className="text-center mt-5">{skill.skill_type}</div>
       <div className="flex flex-col gap-3">
-        {skill.skills.map((skl) => (
-          <div key={skl.name}>
-            <h3 className="text-xs mb-1">{skl.name}</h3>
+        {skill.allSkills.map((skl) => (
+          <div key={skl.tool}>
+            <h3 className="text-xs mb-1">{skl.tool}</h3>
             <div className="bg-gray-300 h-2">
               <div
-                style={{ width: `${skl.consume}` }}
+                style={{ width: `${skl.capacity}` }}
                 className={`bg-colors-quinary h-full relative`}
               >
-                <div className="bg-colors-quinary h-4 w-4 absolute -right-1 rounded-full -top-1 shadow-xl shadow-colors-quaternary flex items-center justify-center">
+                <div
+                  className={`bg-colors-quinary h-4 w-4 absolute ${
+                    lang === "ar" ? "-left-1" : "-right-1"
+                  } rounded-full -top-1 shadow-xl shadow-colors-quaternary flex items-center justify-center`}
+                >
                   <IoIosCheckmark color="white" />
                 </div>
               </div>

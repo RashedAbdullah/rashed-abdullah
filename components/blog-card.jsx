@@ -3,8 +3,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-provider";
 
-const BlogCard = ({ blog }) => {
-  const langs = useLanguage()
+const BlogCard = ({ blog, lang }) => {
+  const langs = useLanguage();
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
@@ -13,13 +13,13 @@ const BlogCard = ({ blog }) => {
       className="bg-white shadow relative lg:mt-0 mt-5"
     >
       <div className="overflow-hidden">
-        <Link href={`/blogs/${blog.id}`} className="">
+        <Link href={`/${lang}/blogs/${blog.id}`} className="">
           <Image
-            src="/blog.jpg"
+            src={blog.thumbnail}
             height={1000}
             width={1000}
             alt=""
-            className="h- object-cover hover:scale-105 transition duration-300"
+            className="p-1 object-cover hover:scale-105 transition duration-300"
           />
         </Link>
       </div>
@@ -43,11 +43,9 @@ const BlogCard = ({ blog }) => {
           </ul>
 
           <h2 className="text-lg">{blog.title}</h2>
-          <p className="font-[200] text-sm">
-            {blog.content[0].slice(0, 240)} ...
-          </p>
+          <p className="font-[200] text-sm">{blog.content.slice(0, 280)} ...</p>
           <div>
-            <Link href={`/blogs/${blog.id}`}>
+            <Link href={`/blogs/${blog._id}`}>
               <button className="bg-colors-quinary text-white px-5 py-2 mb-5 hover:bg-blue-800 transition">
                 {langs.readmore}
               </button>

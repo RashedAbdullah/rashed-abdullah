@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6658a757c64baf8182c71efa"
+  },
+  "skill_type": "Professional",
+  "allSkills": [
+    {
+      "tool": "JavaScript",
+      "capacity": "64%"
+    },
+    {
+      "tool": "React.js",
+      "capacity": "64%"
+    },
+    {
+      "tool": "Next.js",
+      "capacity": "64%"
+    },
+    {
+      "tool": "Node.js",
+      "capacity": "64%"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6658a757c64baf8182c71efb"
+  },
+  "skill_type": "Personal",
+  "allSkills": [
+    {
+      "tool": "কমিউনিকেশন",
+      "capacity": "64%"
+    },
+    {
+      "tool": "টিম ওয়ার্ক",
+      "capacity": "64%"
+    },
+    {
+      "tool": "ভাষা",
+      "capacity": "64%"
+    },
+    {
+      "tool": "ক্রিয়েটিভিটি",
+      "capacity": "64%"
+    }
+  ]
+}]

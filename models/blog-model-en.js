@@ -17,7 +17,7 @@ const blogSchema = new Schema({
     required: true,
     type: Array,
   },
-  thumenail: {
+  thumbnail: {
     required: true,
     type: String,
   },

@@ -1,20 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Title from "./title";
-import { projects } from "@/data/projects";
 import ProjectCard from "./project-card";
 import ProjectCategory from "./projects-category";
 import { useLanguage } from "@/contexts/language-provider";
+import { getProjects_ar, getProjects_bn, getProjects_en } from "@/actions";
+import { revalidatePath } from "next/cache";
 
 const Projects = ({ lang }) => {
   const langs = useLanguage();
-  const [allprojects, setallProjects] = useState(projects);
+  const [allprojects, setallProjects] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data =
+        (await lang) === "ar"
+          ? await getProjects_ar()
+          : lang === "bn"
+          ? await getProjects_bn()
+          : await getProjects_en();
+
+      setallProjects(data);
+    };
+    getData();
+  }, [lang]);
   const handlePorejctCategory = (category) => {
     switch (category) {
       case "All":
-        return setallProjects(projects);
+        // revalidatePath("/");
+        return allprojects;
       default:
         return setallProjects(
-          projects.filter((project) => project.category === category)
+          allprojects.filter((project) => project.category === category)
         );
     }
   };
@@ -22,11 +38,14 @@ const Projects = ({ lang }) => {
   return (
     <div>
       <Title>{langs.projects}</Title>
-      <ProjectCategory onSwitchCategory={handlePorejctCategory} />
+      <ProjectCategory
+        onSwitchCategory={handlePorejctCategory}
+        projects={allprojects}
+      />
       <div className="lg:grid grid-cols-3 mt-10 gap-5">
         {allprojects.length ? (
           allprojects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard key={project.id} project={project} lang={lang} />
           ))
         ) : (
           <div className="col-span-3 text-center font-[100] text-2xl my-20 text-gray-400">

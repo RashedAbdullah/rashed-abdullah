@@ -7,6 +7,8 @@ import { blogModel_en } from "@/models/blog-model-en";
 import { projectModel_ar } from "@/models/project-model-ar";
 import { projectModel_bn } from "@/models/project-model-bn";
 import { projectModel_en } from "@/models/project-model-en";
+import { skillModel_ar } from "@/models/skill-model-ar";
+import { skillModel_bn } from "@/models/skill-model-bn";
 import { skillModel_en } from "@/models/skill-model-en";
 
 const getProjects_en = async () => {
@@ -14,7 +16,7 @@ const getProjects_en = async () => {
     await connectMongo();
 
     const projects = await projectModel_en.find();
-    return projects.toString();
+    return projects;
   } catch (err) {
     console.log(err.message);
   }
@@ -25,7 +27,7 @@ const getProjects_ar = async () => {
     await connectMongo();
 
     const projects = await projectModel_ar.find();
-    return projects.toString();
+    return projects;
   } catch (err) {
     console.log(err.message);
   }
@@ -36,7 +38,7 @@ const getProjects_bn = async () => {
     await connectMongo();
 
     const projects = await projectModel_bn.find();
-    return projects.toString();
+    return projects;
   } catch (err) {
     console.log(err.message);
   }
@@ -86,6 +88,28 @@ const getSkills_en = async () => {
   }
 };
 
+const getSkills_ar = async () => {
+  try {
+    await connectMongo();
+
+    const skills = await skillModel_ar.find();
+    return skills;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const getSkills_bn = async () => {
+  try {
+    await connectMongo();
+
+    const skills = await skillModel_bn.find();
+    return skills;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const getBlogById_en = async (blogId) => {
   try {
     await connectMongo();
@@ -127,6 +151,8 @@ export {
   getBlogs_ar,
   getBlogs_bn,
   getSkills_en,
+  getSkills_ar,
+  getSkills_bn,
   getBlogById_en,
   getBlogById_ar,
   getBlogById_bn,

@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6658a75ec64baf8182c71efd"
+  },
+  "skill_type": "Professional",
+  "allSkills": [
+    {
+      "tool": "JavaScript",
+      "capacity": "64%"
+    },
+    {
+      "tool": "React.js",
+      "capacity": "64%"
+    },
+    {
+      "tool": "Next.js",
+      "capacity": "64%"
+    },
+    {
+      "tool": "Node.js",
+      "capacity": "64%"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6658a75ec64baf8182c71efe"
+  },
+  "skill_type": "Personal",
+  "allSkills": [
+    {
+      "tool": "التواصل",
+      "capacity": "64%"
+    },
+    {
+      "tool": "العمل الجماعي",
+      "capacity": "64%"
+    },
+    {
+      "tool": "اللغات",
+      "capacity": "64%"
+    },
+    {
+      "tool": "الإبداع",
+      "capacity": "64%"
+    }
+  ]
+}]

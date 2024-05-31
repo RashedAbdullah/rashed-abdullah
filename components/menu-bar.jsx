@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-provider";
+import LanguageSwitcher from "./lang-switcher";
 
 const MenuBar = ({
   refs: {
@@ -14,7 +15,6 @@ const MenuBar = ({
     contactRef,
     scrollToSection,
   },
- 
 }) => {
   const [isHide, setIsHide] = useState(false);
 
@@ -23,7 +23,6 @@ const MenuBar = ({
   };
 
   const langs = useLanguage();
-
 
   const handleMenu = (e) => {
     switch (e.target.innerText) {
@@ -117,6 +116,9 @@ const MenuBar = ({
             >
               {langs.contact}
             </button>
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
       </div>
