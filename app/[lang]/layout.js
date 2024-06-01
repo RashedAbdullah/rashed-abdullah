@@ -36,7 +36,7 @@ export default async function RootLayout({ children, params: { lang } }) {
             : lang === "ar"
             ? ruqaa.className
             : siliguri.className
-        } bg-colors-primary selection:text-colors-quinary`}
+        } bg-colors-primary selection:text-colors-quinary dark:bg-colors-dark_bg`}
       >
         <LanguageProvider language={langs}>
           <Header lang={lang} />

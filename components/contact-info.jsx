@@ -10,7 +10,7 @@ const ContactInfo = ({ lang }) => {
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow p-5"
+      className="bg-white dark:bg-colors-dark_card shadow p-5"
     >
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
@@ -18,7 +18,7 @@ const ContactInfo = ({ lang }) => {
             {langs.agename} :
           </span>
         </div>
-        <div className="lg:col-span-9 col-span-7">
+        <div className="lg:col-span-9 col-span-7 dark:text-white">
           <p>{langs.age}</p>
         </div>
       </div>
@@ -28,7 +28,7 @@ const ContactInfo = ({ lang }) => {
             {langs.citizenshipname} :
           </span>
         </div>
-        <div className="lg:col-span-9 col-span-7">
+        <div className="lg:col-span-9 col-span-7 dark:text-white">
           <p>{langs.citizenship}</p>
         </div>
       </div>
@@ -38,7 +38,7 @@ const ContactInfo = ({ lang }) => {
             {langs.addressname} :
           </span>
         </div>
-        <div className="lg:col-span-9 col-span-7">
+        <div className="lg:col-span-9 col-span-7 dark:text-white">
           <p>{langs.address}</p>
         </div>
       </div>{" "}
@@ -48,7 +48,7 @@ const ContactInfo = ({ lang }) => {
             {langs.phonename} :
           </span>
         </div>
-        <div className="lg:col-span-9 col-span-7">
+        <div className="lg:col-span-9 col-span-7 dark:text-white">
           <p>{langs.phone}</p>
         </div>
       </div>
@@ -58,7 +58,7 @@ const ContactInfo = ({ lang }) => {
             {langs.emailname} :
           </span>
         </div>
-        <div className="lg:col-span-9 col-span-7">
+        <div className="lg:col-span-9 col-span-7 dark:text-white">
           <p>{langs.email}</p>
         </div>
       </div>

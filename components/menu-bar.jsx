@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/language-provider";
 import LanguageSwitcher from "./lang-switcher";
+import ThemeSwitcher from "./themeswitcher";
 
 const MenuBar = ({
   refs: {
@@ -116,6 +117,10 @@ const MenuBar = ({
             >
               {langs.contact}
             </button>
+          </li>
+          <li><div className="h-[1px] my-5 bg-white"></div></li>
+          <li>
+            <ThemeSwitcher />
           </li>
           <li>
             <LanguageSwitcher />

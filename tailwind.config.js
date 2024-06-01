@@ -15,6 +15,8 @@ module.exports = {
           tertiary: "#909090",
           quaternary: "#363636",
           quinary: "#304FFF",
+          dark_bg: "#221C3E",
+          dark_card: "#0F0920",
         },
       },
     },

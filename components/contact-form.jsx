@@ -9,27 +9,27 @@ const ContactForm = ({ lang }) => {
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow p-5 mt-4 lg:mt-0"
+      className="bg-white dark:bg-colors-dark_card shadow p-5 mt-4 lg:mt-0"
     >
       <div>
         <input
           type="text"
           placeholder={langs.yourname}
-          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-"
+          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2 dark:bg-colors-dark_bg"
         />
       </div>
       <div>
         <input
           type="email"
           placeholder={langs.youremail}
-          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2"
+          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2 dark:bg-colors-dark_bg"
         />
       </div>
       <div>
         <input
           type="text"
           placeholder={langs.subject}
-          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2"
+          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2 dark:bg-colors-dark_bg"
         />
       </div>
       <div>
@@ -38,7 +38,7 @@ const ContactForm = ({ lang }) => {
           cols={20}
           type="text"
           placeholder={langs.message}
-          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2"
+          className="border-b focus:border-black outline-none w-full font-[200] p-1 transition my-2 dark:bg-colors-dark_bg"
         />
       </div>
       <div>

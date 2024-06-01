@@ -21,10 +21,10 @@ const Profile = async ({ lang }) => {
         />
       </Link>
       <div className="flex flex-col items-center gap-2 lg:pt-20 pt-12">
-        <h2 className="lg:text-4xl text-2xl text-colors-quaternary font-thin">
+        <h2 className="lg:text-4xl text-2xl text-colors-quaternary font-thin dark:text-white">
           {langs.name}
         </h2>
-        <h3 className="text-gray-600 font-[300] text-[18px]">
+        <h3 className="text-gray-600 font-[300] text-[18px] dark:text-white">
           {langs.profession}
         </h3>
         <SocilaLinks />

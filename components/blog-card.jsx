@@ -10,7 +10,7 @@ const BlogCard = ({ blog, lang }) => {
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow relative lg:mt-0 mt-5"
+      className="bg-white dark:bg-colors-dark_card shadow relative lg:mt-0 mt-5"
     >
       <div className="overflow-hidden">
         <Link href={`/${lang}/blogs/${blog.id}`} className="">
@@ -42,8 +42,8 @@ const BlogCard = ({ blog, lang }) => {
             ))}
           </ul>
 
-          <h2 className="text-lg">{blog.title}</h2>
-          <p className="font-[200] text-sm">{blog.content.slice(0, 280)} ...</p>
+          <h2 className="text-lg dark:text-white">{blog.title}</h2>
+          <p className="font-[200] text-sm dark:text-white">{blog.content.slice(0, 280)} ...</p>
           <div>
             <Link href={`/blogs/${blog._id}`}>
               <button className="bg-colors-quinary text-white px-5 py-2 mb-5 hover:bg-blue-800 transition">

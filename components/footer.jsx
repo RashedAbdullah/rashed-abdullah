@@ -7,7 +7,7 @@ const Footer = async ({ lang }) => {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"}>
-      <p className="text-center font-[100] text-sm my-10">
+      <p className="text-center font-[100] text-sm my-10 dark:text-gray-300">
         &copy; {langs.allright}
       </p>
     </div>

@@ -8,7 +8,7 @@ import { getBlogs_en } from "@/actions";
 
 const Blogs = ({ lang }) => {
   const [blogs, setBlogs] = useState([]);
-  console.log(blogs);
+
   useEffect(() => {
     const getBlogs = async () => {
       const data = await getBlogs_en();

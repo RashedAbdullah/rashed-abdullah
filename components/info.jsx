@@ -4,7 +4,7 @@ import React from "react";
 const Info = () => {
   const langs = useLanguage();
   return (
-    <div className="col-span-5">
+    <div className="col-span-5 dark:text-white">
       <div className="grid grid-cols-12 border-b border-dashed py-2">
         <div className="lg:col-span-3 col-span-4">
           <span className=" bg-colors-quinary text-white py-[2px] px-1 rounded-sm">

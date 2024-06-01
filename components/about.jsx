@@ -7,7 +7,7 @@ const About = ({ contactRef, lang }) => {
   return (
     <div
       dir={lang === "ar" ? "rtl" : "ltr"}
-      className=" bg-white p-5 lg:grid grid-cols-12 rounded-sm shadow gap-10 items-center"
+      className=" bg-white dark:bg-colors-dark_card p-5 lg:grid grid-cols-12 rounded-sm shadow gap-10 items-center"
     >
       <Info />
       <Description contactRef={contactRef} />
