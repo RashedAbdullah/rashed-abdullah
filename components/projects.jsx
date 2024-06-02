@@ -4,7 +4,6 @@ import ProjectCard from "./project-card";
 import ProjectCategory from "./projects-category";
 import { useLanguage } from "@/contexts/language-provider";
 import { getProjects_ar, getProjects_bn, getProjects_en } from "@/actions";
-import { revalidatePath } from "next/cache";
 
 const Projects = ({ lang }) => {
   const langs = useLanguage();
@@ -19,7 +18,8 @@ const Projects = ({ lang }) => {
           ? await getProjects_bn()
           : await getProjects_en();
 
-      setallProjects(data);
+      // setallProjects(data);
+      console.log(data);
     };
     getData();
   }, [lang]);
