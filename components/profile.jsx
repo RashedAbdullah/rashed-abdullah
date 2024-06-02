@@ -10,7 +10,7 @@ const Profile = async ({ lang }) => {
 
   return (
     <div className="">
-      <Link href="/">
+      <Link href={`/${lang}`}>
         <Image
           placeholder="blur"
           src={profileImage}

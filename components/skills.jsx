@@ -25,9 +25,12 @@ const Skills = ({ lang }) => {
   return (
     <div>
       <Title>{langs.skills}</Title>
-      <div className="lg:flex gap-3 w-full" dir={lang === "ar" && "rtl"}>
+      <div
+        className="lg:flex gap-3 w-full"
+        dir={lang === "ar" ? "rtl" : undefined}
+      >
         {skills.map((skill) => (
-          <SkillCard key={skill.type} skill={skill} lang={lang} />
+          <SkillCard key={skill.skill_type} skill={skill} lang={lang} />
         ))}
       </div>
     </div>

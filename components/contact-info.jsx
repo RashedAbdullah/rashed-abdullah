@@ -1,12 +1,11 @@
 import { useLanguage } from "@/contexts/language-provider";
-import { aboutMe } from "@/data/about-me";
 import { motion } from "framer-motion";
 
 const ContactInfo = ({ lang }) => {
   const langs = useLanguage();
   return (
     <motion.div
-      dir={lang === "ar" && "rtl"}
+    dir={lang === "ar" ? "rtl" : undefined}
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}

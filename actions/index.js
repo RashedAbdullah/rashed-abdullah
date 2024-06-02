@@ -19,7 +19,7 @@ const getProjects_en = async () => {
   try {
     await connectMongo();
 
-    const projects = await projectModel_en.find();
+    const projects = await projectModel_en.find().lean();
     return replaceMongoIdInArray(projects);
   } catch (err) {
     console.log(err.message);
@@ -30,7 +30,7 @@ const getProjects_ar = async () => {
   try {
     await connectMongo();
 
-    const projects = await projectModel_ar.find();
+    const projects = await projectModel_ar.find().lean();
     return replaceMongoIdInArray(projects);
   } catch (err) {
     console.log(err.message);
@@ -41,7 +41,7 @@ const getProjects_bn = async () => {
   try {
     await connectMongo();
 
-    const projects = await projectModel_bn.find();
+    const projects = await projectModel_bn.find().lean();
     return replaceMongoIdInArray(projects);
   } catch (err) {
     console.log(err.message);
@@ -52,7 +52,7 @@ const getBlogs_en = async () => {
   try {
     await connectMongo();
 
-    const blogs = await blogModel_en.find();
+    const blogs = await blogModel_en.find().lean();
     return replaceMongoIdInArray(blogs);
   } catch (err) {
     console.log(err.message);
@@ -63,7 +63,7 @@ const getBlogs_ar = async () => {
   try {
     await connectMongo();
 
-    const blogs = await blogModel_ar.find();
+    const blogs = await blogModel_ar.find().lean();
     return replaceMongoIdInArray(blogs);
   } catch (err) {
     console.log(err.message);
@@ -74,7 +74,7 @@ const getBlogs_bn = async () => {
   try {
     await connectMongo();
 
-    const blogs = await blogModel_bn.find();
+    const blogs = await blogModel_bn.find().lean();
     return replaceMongoIdInArray(blogs);
   } catch (err) {
     console.log(err.message);
@@ -85,7 +85,7 @@ const getSkills_en = async () => {
   try {
     await connectMongo();
 
-    const skills = await skillModel_en.find();
+    const skills = await skillModel_en.find().lean();
     return replaceMongoIdInArray(skills);
   } catch (err) {
     console.log(err.message);
@@ -96,7 +96,7 @@ const getSkills_ar = async () => {
   try {
     await connectMongo();
 
-    const skills = await skillModel_ar.find();
+    const skills = await skillModel_ar.find().lean();
     return replaceMongoIdInArray(skills);
   } catch (err) {
     console.log(err.message);
@@ -107,7 +107,7 @@ const getSkills_bn = async () => {
   try {
     await connectMongo();
 
-    const skills = await skillModel_bn.find();
+    const skills = await skillModel_bn.find().lean();
     return replaceMongoIdInArray(skills);
   } catch (err) {
     console.log(err.message);
@@ -118,7 +118,7 @@ const getBlogById_en = async (blogId) => {
   try {
     await connectMongo();
 
-    const blog = await blogModel_en.findById(blogId);
+    const blog = await blogModel_en.findById(blogId).lean();
     return replaceMongoIdInObject(blog);
   } catch (err) {
     console.log(err.message);
@@ -129,7 +129,7 @@ const getBlogById_ar = async (blogId) => {
   try {
     await connectMongo();
 
-    const blog = await blogModel_ar.findById(blogId);
+    const blog = await blogModel_ar.findById(blogId).lean();
     return replaceMongoIdInObject(blog);
   } catch (err) {
     console.log(err.message);
@@ -140,7 +140,7 @@ const getBlogById_bn = async (blogId) => {
   try {
     await connectMongo();
 
-    const blog = await blogModel_bn.findById(blogId);
+    const blog = await blogModel_bn.findById(blogId).lean();
     return replaceMongoIdInObject(blog);
   } catch (err) {
     console.log(err.message);

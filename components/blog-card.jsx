@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/language-provider";
 
 const BlogCard = ({ blog, lang }) => {
   const langs = useLanguage();
+
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
@@ -43,9 +44,11 @@ const BlogCard = ({ blog, lang }) => {
           </ul>
 
           <h2 className="text-lg dark:text-white">{blog.title}</h2>
-          <p className="font-[200] text-sm dark:text-white">{blog.content.slice(0, 280)} ...</p>
+          <p className="font-[200] text-sm dark:text-white">
+            {blog.content.slice(0, 280)} ...
+          </p>
           <div>
-            <Link href={`/blogs/${blog._id}`}>
+            <Link href={`/${lang}/blogs/${blog.id}`}>
               <button className="bg-colors-quinary text-white px-5 py-2 mb-5 hover:bg-blue-800 transition">
                 {langs.readmore}
               </button>

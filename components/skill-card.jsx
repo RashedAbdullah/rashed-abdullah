@@ -6,7 +6,9 @@ const SkillCard = ({ skill, lang }) => {
   return (
     <div className="lg:w-[50%] bg-white dark:bg-colors-dark_card p-5 shadow relative mt-10 lg:mt-0">
       <div className="h-10 w-10 bg-colors-quinary rounded-full absolute left-[50%] translate-x-[-50%] -top-5 shadow-2xl shadow-colors-quaternary flex justify-center items-center text-lg">
-        {skill.skill_type === "Professional" ? (
+        {skill.skill_type === "Professional" ||
+        skill.skill_type === "প্রফেশনাল" ||
+        skill.skill_type === "المهارات الاحترافية" ? (
           <IoSettingsSharp color="white" />
         ) : (
           <BiSolidUser color="white" />

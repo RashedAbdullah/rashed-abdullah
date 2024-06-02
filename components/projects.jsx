@@ -18,15 +18,13 @@ const Projects = ({ lang }) => {
           ? await getProjects_bn()
           : await getProjects_en();
 
-      // setallProjects(data);
-      console.log(data);
+      setallProjects(data);
     };
     getData();
   }, [lang]);
   const handlePorejctCategory = (category) => {
     switch (category) {
       case "All":
-        // revalidatePath("/");
         return allprojects;
       default:
         return setallProjects(

@@ -5,7 +5,7 @@ const ContactForm = ({ lang }) => {
   const langs = useLanguage();
   return (
     <motion.form
-    dir={lang === "ar" ? "rtl" : "ltr"}
+    dir={lang === "ar" ? "rtl" : undefined}
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}

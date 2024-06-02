@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useLanguage } from "@/contexts/language-provider";
-import { aboutMe } from "@/data/about-me";
+
 import React from "react";
 
 const Description = ({ contactRef }) => {
@@ -11,7 +11,7 @@ const Description = ({ contactRef }) => {
 
       <div className="flex gap-3 flex-col lg:flex-row">
         <a
-          href="../resume/RashedResume.pdf"
+          href="/RashedResume.pdf"
           download="RashedResume.pdf"
           className="bg-colors-quinary text-white py-2 px-5 hover:bg-blue-800 transition"
         >
