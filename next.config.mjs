@@ -19,6 +19,7 @@ const nextConfig = {
         hostname: "github-profile-summary-cards.vercel.app",
       },
     ],
+    dangerouslyAllowSVG: true,
   },
 };
 

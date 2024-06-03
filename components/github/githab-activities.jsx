@@ -1,5 +1,3 @@
-// components/GitHubStats.js
-import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
 
 const GithubActivity = () => {
