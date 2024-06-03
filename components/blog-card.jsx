@@ -48,7 +48,7 @@ const BlogCard = ({ blog, lang }) => {
             {blog.content.slice(0, 280)} ...
           </p>
           <div>
-            <Link href={`/${lang}/blogs/${blog.id}`}>
+            <Link href={`/${lang}/blogs/${blog.title.replace(" ", "_")}`}>
               <button className="bg-colors-quinary text-white px-5 py-2 mb-5 hover:bg-blue-800 transition">
                 {langs.readmore}
               </button>
