@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "github-readme-streak-stats.herokuapp.com",
       },
+      {
+        protocol: "http",
+        hostname: "github-profile-summary-cards.vercel.app",
+      },
     ],
   },
 };
