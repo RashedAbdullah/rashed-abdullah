@@ -57,9 +57,9 @@ export default function Home({ params: { lang } }) {
           <div ref={projectsRef}>
             <Projects lang={lang} />
           </div>
-          <div ref={blogsRef}>
+          {/* <div ref={blogsRef}>
             <Blogs lang={lang} />
-          </div>
+          </div> */}
           <div ref={contactRef}>
             <ContacetMe lang={lang} />
           </div>
